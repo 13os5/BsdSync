@@ -201,11 +201,28 @@ namespace BsdSync.Controllers
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(dt);
-                con.Close();
+
                 #region
                 //var Status = dt;
                 #endregion
-                return Json<DataTable>(dt);
+                con.Close();
+
+                DataTable dtLogin = new DataTable();
+                dtLogin.Columns.Add("success", typeof(bool));
+                dtLogin.Columns.Add("token", typeof(string));
+
+                if (dt.Rows[0]["Permit"].ToString() == "0")
+                {
+                    dtLogin.Rows.Add(false, null);
+                    return Json<DataTable>(dtLogin);
+                }
+                else
+                {
+                    string token = genToken(dt.Rows[0]["username"].ToString(), dt.Rows[0]["Permit"].ToString());
+                    dtLogin.Rows.Add(true, token);
+                    return Json<DataTable>(dtLogin);
+                }
+
             }
             catch (Exception ex)
             {
@@ -214,6 +231,32 @@ namespace BsdSync.Controllers
                 dtNew.Rows.Add("Error : " + ex.ToString());
                 return Json<DataTable>(dtNew);
             }
+        }
+
+        public string genToken(string usn, string Permit)
+        {
+            string key = " WarakornT.!#~ WarakornT.!~% WarakornT.!@~ WarakornT.!!~ WarakornT.!&~ WarakornT.!~~!@#!";
+
+            var securityKey = new Microsoft.IdentityModel.Tokens.SymmetricSecurityKey(Encoding.UTF8.GetBytes(key));
+
+            var credentials = new Microsoft.IdentityModel.Tokens.SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+
+            var header = new JwtHeader(credentials);
+
+            var payload = new JwtPayload
+            {
+               { "name", usn},
+               { "role", Permit} // 0 = not permit, 1 = admin, 2 = RD, 3 = Extra user
+            };
+
+            var secToken = new JwtSecurityToken(header, payload);
+            var handler = new JwtSecurityTokenHandler();
+
+            var tokenString = handler.WriteToken(secToken);
+
+            var token = handler.ReadJwtToken(tokenString);
+
+            return token.RawData.ToString();
         }
 
         [HttpPost]
