@@ -1,0 +1,510 @@
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\ApplicationInsights.config
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\BsdSync.dll.config
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\BsdSync.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\BsdSync.pdb
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\csc.exe
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\csc.exe.config
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\csc.rsp
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\csi.exe
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\csi.exe.config
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\csi.rsp
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\System.AppContext.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\System.Console.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\System.IO.Compression.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\System.IO.Pipes.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\System.Security.Claims.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\System.Threading.Thread.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\System.ValueTuple.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\System.Xml.XPath.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\vbc.exe
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\vbc.exe.config
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\vbc.rsp
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\VBCSCompiler.exe
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\Antlr3.Runtime.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\Microsoft.AI.Web.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\Microsoft.ApplicationInsights.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\Newtonsoft.Json.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\System.Net.Http.Formatting.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\System.Web.Helpers.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\System.Web.Http.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\System.Web.Http.WebHost.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\System.Web.Mvc.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\System.Web.Optimization.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\System.Web.Razor.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\System.Web.WebPages.Deployment.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\System.Web.WebPages.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\System.Web.WebPages.Razor.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\WebGrease.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\Newtonsoft.Json.xml
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\System.Net.Http.Formatting.xml
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\System.Web.Helpers.xml
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\System.Web.Http.xml
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\System.Web.Http.WebHost.xml
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\System.Web.Mvc.xml
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\System.Web.Optimization.xml
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\System.Web.Razor.xml
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\System.Web.WebPages.xml
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\System.Web.WebPages.Deployment.xml
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\System.Web.WebPages.Razor.xml
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\Antlr3.Runtime.pdb
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\Microsoft.AI.Web.xml
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\obj\Debug\BsdSync.csprojAssemblyReference.cache
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\obj\Debug\BsdSync.csproj.CoreCompileInputs.cache
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\obj\Debug\BsdSync.csproj.CopyComplete
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\obj\Debug\BsdSync.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\obj\Debug\BsdSync.pdb
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\System.Web.Cors.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\System.Web.Http.Cors.dll
+C:\Users\AKE_DEV\Documents\Visual Studio 2017\Projects\BsdSync\BsdSync\bin\System.Web.Http.Cors.xml
+D:\Boss\BsdSync\BsdSync\bin\ApplicationInsights.config
+D:\Boss\BsdSync\BsdSync\bin\BsdSync.dll.config
+D:\Boss\BsdSync\BsdSync\bin\BsdSync.dll
+D:\Boss\BsdSync\BsdSync\bin\BsdSync.pdb
+D:\Boss\BsdSync\BsdSync\bin\roslyn\csc.exe
+D:\Boss\BsdSync\BsdSync\bin\roslyn\csc.exe.config
+D:\Boss\BsdSync\BsdSync\bin\roslyn\csc.rsp
+D:\Boss\BsdSync\BsdSync\bin\roslyn\csi.exe
+D:\Boss\BsdSync\BsdSync\bin\roslyn\csi.exe.config
+D:\Boss\BsdSync\BsdSync\bin\roslyn\csi.rsp
+D:\Boss\BsdSync\BsdSync\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Boss\BsdSync\BsdSync\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Boss\BsdSync\BsdSync\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Boss\BsdSync\BsdSync\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Boss\BsdSync\BsdSync\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Boss\BsdSync\BsdSync\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Boss\BsdSync\BsdSync\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Boss\BsdSync\BsdSync\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Boss\BsdSync\BsdSync\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Boss\BsdSync\BsdSync\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Boss\BsdSync\BsdSync\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Boss\BsdSync\BsdSync\bin\roslyn\System.AppContext.dll
+D:\Boss\BsdSync\BsdSync\bin\roslyn\System.Collections.Immutable.dll
+D:\Boss\BsdSync\BsdSync\bin\roslyn\System.Console.dll
+D:\Boss\BsdSync\BsdSync\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Boss\BsdSync\BsdSync\bin\roslyn\System.Diagnostics.Process.dll
+D:\Boss\BsdSync\BsdSync\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Boss\BsdSync\BsdSync\bin\roslyn\System.IO.Compression.dll
+D:\Boss\BsdSync\BsdSync\bin\roslyn\System.IO.FileSystem.dll
+D:\Boss\BsdSync\BsdSync\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+D:\Boss\BsdSync\BsdSync\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Boss\BsdSync\BsdSync\bin\roslyn\System.IO.Pipes.dll
+D:\Boss\BsdSync\BsdSync\bin\roslyn\System.Reflection.Metadata.dll
+D:\Boss\BsdSync\BsdSync\bin\roslyn\System.Security.AccessControl.dll
+D:\Boss\BsdSync\BsdSync\bin\roslyn\System.Security.Claims.dll
+D:\Boss\BsdSync\BsdSync\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Boss\BsdSync\BsdSync\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Boss\BsdSync\BsdSync\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Boss\BsdSync\BsdSync\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Boss\BsdSync\BsdSync\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Boss\BsdSync\BsdSync\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Boss\BsdSync\BsdSync\bin\roslyn\System.Threading.Thread.dll
+D:\Boss\BsdSync\BsdSync\bin\roslyn\System.ValueTuple.dll
+D:\Boss\BsdSync\BsdSync\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Boss\BsdSync\BsdSync\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Boss\BsdSync\BsdSync\bin\roslyn\System.Xml.XPath.dll
+D:\Boss\BsdSync\BsdSync\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Boss\BsdSync\BsdSync\bin\roslyn\vbc.exe
+D:\Boss\BsdSync\BsdSync\bin\roslyn\vbc.exe.config
+D:\Boss\BsdSync\BsdSync\bin\roslyn\vbc.rsp
+D:\Boss\BsdSync\BsdSync\bin\roslyn\VBCSCompiler.exe
+D:\Boss\BsdSync\BsdSync\bin\roslyn\VBCSCompiler.exe.config
+D:\Boss\BsdSync\BsdSync\bin\Antlr3.Runtime.dll
+D:\Boss\BsdSync\BsdSync\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Boss\BsdSync\BsdSync\bin\Microsoft.AI.DependencyCollector.dll
+D:\Boss\BsdSync\BsdSync\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Boss\BsdSync\BsdSync\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Boss\BsdSync\BsdSync\bin\Microsoft.AI.Web.dll
+D:\Boss\BsdSync\BsdSync\bin\Microsoft.AI.WindowsServer.dll
+D:\Boss\BsdSync\BsdSync\bin\Microsoft.ApplicationInsights.dll
+D:\Boss\BsdSync\BsdSync\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+D:\Boss\BsdSync\BsdSync\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Boss\BsdSync\BsdSync\bin\Microsoft.Web.Infrastructure.dll
+D:\Boss\BsdSync\BsdSync\bin\Newtonsoft.Json.dll
+D:\Boss\BsdSync\BsdSync\bin\System.Diagnostics.DiagnosticSource.dll
+D:\Boss\BsdSync\BsdSync\bin\System.Net.Http.Formatting.dll
+D:\Boss\BsdSync\BsdSync\bin\System.Web.Cors.dll
+D:\Boss\BsdSync\BsdSync\bin\System.Web.Helpers.dll
+D:\Boss\BsdSync\BsdSync\bin\System.Web.Http.Cors.dll
+D:\Boss\BsdSync\BsdSync\bin\System.Web.Http.dll
+D:\Boss\BsdSync\BsdSync\bin\System.Web.Http.WebHost.dll
+D:\Boss\BsdSync\BsdSync\bin\System.Web.Mvc.dll
+D:\Boss\BsdSync\BsdSync\bin\System.Web.Optimization.dll
+D:\Boss\BsdSync\BsdSync\bin\System.Web.Razor.dll
+D:\Boss\BsdSync\BsdSync\bin\System.Web.WebPages.Deployment.dll
+D:\Boss\BsdSync\BsdSync\bin\System.Web.WebPages.dll
+D:\Boss\BsdSync\BsdSync\bin\System.Web.WebPages.Razor.dll
+D:\Boss\BsdSync\BsdSync\bin\WebGrease.dll
+D:\Boss\BsdSync\BsdSync\bin\System.Net.Http.Formatting.xml
+D:\Boss\BsdSync\BsdSync\bin\System.Web.Http.xml
+D:\Boss\BsdSync\BsdSync\bin\System.Web.Http.Cors.xml
+D:\Boss\BsdSync\BsdSync\bin\Newtonsoft.Json.xml
+D:\Boss\BsdSync\BsdSync\bin\System.Web.Helpers.xml
+D:\Boss\BsdSync\BsdSync\bin\System.Web.Http.WebHost.xml
+D:\Boss\BsdSync\BsdSync\bin\System.Web.Mvc.xml
+D:\Boss\BsdSync\BsdSync\bin\System.Web.Optimization.xml
+D:\Boss\BsdSync\BsdSync\bin\System.Web.Razor.xml
+D:\Boss\BsdSync\BsdSync\bin\System.Web.WebPages.xml
+D:\Boss\BsdSync\BsdSync\bin\System.Web.WebPages.Deployment.xml
+D:\Boss\BsdSync\BsdSync\bin\System.Web.WebPages.Razor.xml
+D:\Boss\BsdSync\BsdSync\bin\Antlr3.Runtime.pdb
+D:\Boss\BsdSync\BsdSync\bin\System.Diagnostics.DiagnosticSource.xml
+D:\Boss\BsdSync\BsdSync\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+D:\Boss\BsdSync\BsdSync\bin\Microsoft.AI.DependencyCollector.xml
+D:\Boss\BsdSync\BsdSync\bin\Microsoft.AI.WindowsServer.xml
+D:\Boss\BsdSync\BsdSync\bin\Microsoft.AI.Web.xml
+D:\Boss\BsdSync\BsdSync\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Boss\BsdSync\BsdSync\obj\Debug\BsdSync.csprojAssemblyReference.cache
+D:\Boss\BsdSync\BsdSync\obj\Debug\BsdSync.csproj.CoreCompileInputs.cache
+D:\Boss\BsdSync\BsdSync\obj\Debug\BsdSync.csproj.CopyComplete
+D:\Boss\BsdSync\BsdSync\obj\Debug\BsdSync.dll
+D:\Boss\BsdSync\BsdSync\obj\Debug\BsdSync.pdb
+D:\BsdSync\BsdSync\bin\ApplicationInsights.config
+D:\BsdSync\BsdSync\bin\BsdSync.dll.config
+D:\BsdSync\BsdSync\bin\BsdSync.dll
+D:\BsdSync\BsdSync\bin\BsdSync.pdb
+D:\BsdSync\BsdSync\bin\roslyn\csc.exe
+D:\BsdSync\BsdSync\bin\roslyn\csc.exe.config
+D:\BsdSync\BsdSync\bin\roslyn\csc.rsp
+D:\BsdSync\BsdSync\bin\roslyn\csi.exe
+D:\BsdSync\BsdSync\bin\roslyn\csi.exe.config
+D:\BsdSync\BsdSync\bin\roslyn\csi.rsp
+D:\BsdSync\BsdSync\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\BsdSync\BsdSync\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\BsdSync\BsdSync\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\BsdSync\BsdSync\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\BsdSync\BsdSync\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\BsdSync\BsdSync\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\BsdSync\BsdSync\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\BsdSync\BsdSync\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\BsdSync\BsdSync\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\BsdSync\BsdSync\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\BsdSync\BsdSync\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\BsdSync\BsdSync\bin\roslyn\System.AppContext.dll
+D:\BsdSync\BsdSync\bin\roslyn\System.Collections.Immutable.dll
+D:\BsdSync\BsdSync\bin\roslyn\System.Console.dll
+D:\BsdSync\BsdSync\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\BsdSync\BsdSync\bin\roslyn\System.Diagnostics.Process.dll
+D:\BsdSync\BsdSync\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\BsdSync\BsdSync\bin\roslyn\System.IO.Compression.dll
+D:\BsdSync\BsdSync\bin\roslyn\System.IO.FileSystem.dll
+D:\BsdSync\BsdSync\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+D:\BsdSync\BsdSync\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\BsdSync\BsdSync\bin\roslyn\System.IO.Pipes.dll
+D:\BsdSync\BsdSync\bin\roslyn\System.Reflection.Metadata.dll
+D:\BsdSync\BsdSync\bin\roslyn\System.Security.AccessControl.dll
+D:\BsdSync\BsdSync\bin\roslyn\System.Security.Claims.dll
+D:\BsdSync\BsdSync\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\BsdSync\BsdSync\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\BsdSync\BsdSync\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\BsdSync\BsdSync\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\BsdSync\BsdSync\bin\roslyn\System.Security.Principal.Windows.dll
+D:\BsdSync\BsdSync\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\BsdSync\BsdSync\bin\roslyn\System.Threading.Thread.dll
+D:\BsdSync\BsdSync\bin\roslyn\System.ValueTuple.dll
+D:\BsdSync\BsdSync\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\BsdSync\BsdSync\bin\roslyn\System.Xml.XmlDocument.dll
+D:\BsdSync\BsdSync\bin\roslyn\System.Xml.XPath.dll
+D:\BsdSync\BsdSync\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\BsdSync\BsdSync\bin\roslyn\vbc.exe
+D:\BsdSync\BsdSync\bin\roslyn\vbc.exe.config
+D:\BsdSync\BsdSync\bin\roslyn\vbc.rsp
+D:\BsdSync\BsdSync\bin\roslyn\VBCSCompiler.exe
+D:\BsdSync\BsdSync\bin\roslyn\VBCSCompiler.exe.config
+D:\BsdSync\BsdSync\bin\Antlr3.Runtime.dll
+D:\BsdSync\BsdSync\bin\Microsoft.AI.Agent.Intercept.dll
+D:\BsdSync\BsdSync\bin\Microsoft.AI.DependencyCollector.dll
+D:\BsdSync\BsdSync\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\BsdSync\BsdSync\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\BsdSync\BsdSync\bin\Microsoft.AI.Web.dll
+D:\BsdSync\BsdSync\bin\Microsoft.AI.WindowsServer.dll
+D:\BsdSync\BsdSync\bin\Microsoft.ApplicationInsights.dll
+D:\BsdSync\BsdSync\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+D:\BsdSync\BsdSync\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\BsdSync\BsdSync\bin\Microsoft.Web.Infrastructure.dll
+D:\BsdSync\BsdSync\bin\Newtonsoft.Json.dll
+D:\BsdSync\BsdSync\bin\System.Diagnostics.DiagnosticSource.dll
+D:\BsdSync\BsdSync\bin\System.Net.Http.Formatting.dll
+D:\BsdSync\BsdSync\bin\System.Web.Cors.dll
+D:\BsdSync\BsdSync\bin\System.Web.Helpers.dll
+D:\BsdSync\BsdSync\bin\System.Web.Http.Cors.dll
+D:\BsdSync\BsdSync\bin\System.Web.Http.dll
+D:\BsdSync\BsdSync\bin\System.Web.Http.WebHost.dll
+D:\BsdSync\BsdSync\bin\System.Web.Mvc.dll
+D:\BsdSync\BsdSync\bin\System.Web.Optimization.dll
+D:\BsdSync\BsdSync\bin\System.Web.Razor.dll
+D:\BsdSync\BsdSync\bin\System.Web.WebPages.Deployment.dll
+D:\BsdSync\BsdSync\bin\System.Web.WebPages.dll
+D:\BsdSync\BsdSync\bin\System.Web.WebPages.Razor.dll
+D:\BsdSync\BsdSync\bin\WebGrease.dll
+D:\BsdSync\BsdSync\bin\System.Net.Http.Formatting.xml
+D:\BsdSync\BsdSync\bin\System.Web.Http.xml
+D:\BsdSync\BsdSync\bin\System.Web.Http.Cors.xml
+D:\BsdSync\BsdSync\bin\Newtonsoft.Json.xml
+D:\BsdSync\BsdSync\bin\System.Web.Helpers.xml
+D:\BsdSync\BsdSync\bin\System.Web.Http.WebHost.xml
+D:\BsdSync\BsdSync\bin\System.Web.Mvc.xml
+D:\BsdSync\BsdSync\bin\System.Web.Optimization.xml
+D:\BsdSync\BsdSync\bin\System.Web.Razor.xml
+D:\BsdSync\BsdSync\bin\System.Web.WebPages.xml
+D:\BsdSync\BsdSync\bin\System.Web.WebPages.Deployment.xml
+D:\BsdSync\BsdSync\bin\System.Web.WebPages.Razor.xml
+D:\BsdSync\BsdSync\bin\Antlr3.Runtime.pdb
+D:\BsdSync\BsdSync\bin\System.Diagnostics.DiagnosticSource.xml
+D:\BsdSync\BsdSync\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+D:\BsdSync\BsdSync\bin\Microsoft.AI.DependencyCollector.xml
+D:\BsdSync\BsdSync\bin\Microsoft.AI.WindowsServer.xml
+D:\BsdSync\BsdSync\bin\Microsoft.AI.Web.xml
+D:\BsdSync\BsdSync\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\BsdSync\BsdSync\obj\Debug\BsdSync.csproj.CoreCompileInputs.cache
+D:\BsdSync\BsdSync\obj\Debug\BsdSync.csproj.CopyComplete
+D:\BsdSync\BsdSync\obj\Debug\BsdSync.dll
+D:\BsdSync\BsdSync\obj\Debug\BsdSync.pdb
+D:\BsdSync\BsdSync\obj\Debug\BsdSync.csprojAssemblyReference.cache
+D:\BSD_Service\BsdSync\BsdSync\bin\ApplicationInsights.config
+D:\BSD_Service\BsdSync\BsdSync\bin\BsdSync.dll.config
+D:\BSD_Service\BsdSync\BsdSync\bin\BsdSync.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\BsdSync.pdb
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\csc.exe
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\csc.exe.config
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\csc.rsp
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\csi.exe
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\csi.exe.config
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\csi.rsp
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.AppContext.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Collections.Immutable.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Console.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Diagnostics.Process.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.IO.Compression.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.IO.FileSystem.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.IO.Pipes.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Reflection.Metadata.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Security.AccessControl.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Security.Claims.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Security.Principal.Windows.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Threading.Thread.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.ValueTuple.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Xml.XmlDocument.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Xml.XPath.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\vbc.exe
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\vbc.exe.config
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\vbc.rsp
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\VBCSCompiler.exe
+D:\BSD_Service\BsdSync\BsdSync\bin\roslyn\VBCSCompiler.exe.config
+D:\BSD_Service\BsdSync\BsdSync\bin\Antlr3.Runtime.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\Microsoft.AI.Agent.Intercept.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\Microsoft.AI.DependencyCollector.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\Microsoft.AI.Web.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\Microsoft.AI.WindowsServer.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\Microsoft.ApplicationInsights.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\Microsoft.Web.Infrastructure.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\Newtonsoft.Json.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\System.Diagnostics.DiagnosticSource.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\System.Net.Http.Formatting.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\System.Web.Cors.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\System.Web.Helpers.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\System.Web.Http.Cors.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\System.Web.Http.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\System.Web.Http.WebHost.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\System.Web.Mvc.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\System.Web.Optimization.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\System.Web.Razor.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\System.Web.WebPages.Deployment.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\System.Web.WebPages.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\System.Web.WebPages.Razor.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\WebGrease.dll
+D:\BSD_Service\BsdSync\BsdSync\bin\System.Net.Http.Formatting.xml
+D:\BSD_Service\BsdSync\BsdSync\bin\System.Web.Http.xml
+D:\BSD_Service\BsdSync\BsdSync\bin\System.Web.Http.Cors.xml
+D:\BSD_Service\BsdSync\BsdSync\bin\Newtonsoft.Json.xml
+D:\BSD_Service\BsdSync\BsdSync\bin\System.Web.Helpers.xml
+D:\BSD_Service\BsdSync\BsdSync\bin\System.Web.Http.WebHost.xml
+D:\BSD_Service\BsdSync\BsdSync\bin\System.Web.Mvc.xml
+D:\BSD_Service\BsdSync\BsdSync\bin\System.Web.Optimization.xml
+D:\BSD_Service\BsdSync\BsdSync\bin\System.Web.Razor.xml
+D:\BSD_Service\BsdSync\BsdSync\bin\System.Web.WebPages.xml
+D:\BSD_Service\BsdSync\BsdSync\bin\System.Web.WebPages.Deployment.xml
+D:\BSD_Service\BsdSync\BsdSync\bin\System.Web.WebPages.Razor.xml
+D:\BSD_Service\BsdSync\BsdSync\bin\Antlr3.Runtime.pdb
+D:\BSD_Service\BsdSync\BsdSync\bin\System.Diagnostics.DiagnosticSource.xml
+D:\BSD_Service\BsdSync\BsdSync\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+D:\BSD_Service\BsdSync\BsdSync\bin\Microsoft.AI.DependencyCollector.xml
+D:\BSD_Service\BsdSync\BsdSync\bin\Microsoft.AI.WindowsServer.xml
+D:\BSD_Service\BsdSync\BsdSync\bin\Microsoft.AI.Web.xml
+D:\BSD_Service\BsdSync\BsdSync\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\BSD_Service\BsdSync\BsdSync\obj\Debug\BsdSync.csproj.CoreCompileInputs.cache
+D:\BSD_Service\BsdSync\BsdSync\obj\Debug\BsdSync.csproj.CopyComplete
+D:\BSD_Service\BsdSync\BsdSync\obj\Debug\BsdSync.dll
+D:\BSD_Service\BsdSync\BsdSync\obj\Debug\BsdSync.pdb
+D:\BSD_Service\BsdSync\BsdSync\obj\Debug\BsdSync.csprojAssemblyReference.cache
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.IO.Compression.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\VBCSCompiler.exe
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\ApplicationInsights.config
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\BsdSync.dll.config
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\BsdSync.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\BsdSync.pdb
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\csc.exe
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\csc.exe.config
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\csc.rsp
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\csi.exe
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\csi.exe.config
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\csi.rsp
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.AppContext.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Collections.Immutable.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Console.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Diagnostics.Process.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.IO.FileSystem.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.IO.Pipes.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Reflection.Metadata.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Security.AccessControl.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Security.Claims.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Threading.Thread.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.ValueTuple.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Xml.XPath.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\vbc.exe
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\vbc.exe.config
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\vbc.rsp
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\roslyn\VBCSCompiler.exe.config
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\Antlr3.Runtime.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\Microsoft.AI.DependencyCollector.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\Microsoft.AI.Web.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\Microsoft.AI.WindowsServer.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\Microsoft.ApplicationInsights.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\Microsoft.Web.Infrastructure.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\Newtonsoft.Json.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\System.Diagnostics.DiagnosticSource.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\System.Net.Http.Formatting.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\System.Web.Cors.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\System.Web.Helpers.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\System.Web.Http.Cors.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\System.Web.Http.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\System.Web.Http.WebHost.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\System.Web.Mvc.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\System.Web.Optimization.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\System.Web.Razor.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\System.Web.WebPages.Deployment.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\System.Web.WebPages.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\System.Web.WebPages.Razor.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\WebGrease.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\System.Net.Http.Formatting.xml
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\System.Web.Http.xml
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\System.Web.Http.Cors.xml
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\Newtonsoft.Json.xml
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\System.Web.Helpers.xml
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\System.Web.Http.WebHost.xml
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\System.Web.Mvc.xml
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\System.Web.Optimization.xml
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\System.Web.Razor.xml
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\System.Web.WebPages.xml
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\System.Web.WebPages.Deployment.xml
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\System.Web.WebPages.Razor.xml
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\Antlr3.Runtime.pdb
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\System.Diagnostics.DiagnosticSource.xml
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\Microsoft.AI.DependencyCollector.xml
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\Microsoft.AI.WindowsServer.xml
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\Microsoft.AI.Web.xml
+D:\Backup\BSD_Service\BsdSync\BsdSync\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Backup\BSD_Service\BsdSync\BsdSync\obj\Debug\BsdSync.csproj.CoreCompileInputs.cache
+D:\Backup\BSD_Service\BsdSync\BsdSync\obj\Debug\BsdSync.csproj.CopyComplete
+D:\Backup\BSD_Service\BsdSync\BsdSync\obj\Debug\BsdSync.dll
+D:\Backup\BSD_Service\BsdSync\BsdSync\obj\Debug\BsdSync.pdb
+D:\Backup\BSD_Service\BsdSync\BsdSync\obj\Debug\BsdSync.csprojAssemblyReference.cache
