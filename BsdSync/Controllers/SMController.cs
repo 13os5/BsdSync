@@ -8,6 +8,10 @@ using System.Web.Http;
 using System.Data;
 using System.Data.SqlClient;
 using System.Web.Http.Cors;
+using System.IdentityModel.Tokens.Jwt;
+using Microsoft.IdentityModel.Tokens;
+using System.Web;
+using IdentityModel.Client;
 
 namespace BsdSync.Controllers
 {
@@ -191,38 +195,56 @@ namespace BsdSync.Controllers
         {
             try
             {
-                SqlConnection con = new SqlConnection(helper.Strcon);
-                con.Open();
-                DataSet ds = new DataSet();
-                SqlCommand cmd = new SqlCommand("sp_bsdMALogin", con);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@usn", user.Username);
-                cmd.Parameters.AddWithValue("@pwd", user.Password);
-                DataTable dt = new DataTable();
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(dt);
+                Request.Headers.Contains("app_id");
+                Request.Headers.Contains("app_key");
+                string appId;
+                string appKey;
 
-                #region
-                //var Status = dt;
-                #endregion
-                con.Close();
-
-                DataTable dtLogin = new DataTable();
-                dtLogin.Columns.Add("success", typeof(bool));
-                dtLogin.Columns.Add("token", typeof(string));
-
-                if (dt.Rows[0]["Permit"].ToString() == "0")
+                if (String.IsNullOrEmpty(Request.Headers.GetValues("app_id").First()) || String.IsNullOrEmpty(Request.Headers.GetValues("app_key").First()))
                 {
-                    dtLogin.Rows.Add(false, null);
-                    return Json<DataTable>(dtLogin);
+                    return null;
+                }
+                else if (Request.Headers.GetValues("app_id").First() != "BSD_Service" || Request.Headers.GetValues("app_key").First() != " WarakornT13os5!#")
+                {
+                    return null;
                 }
                 else
                 {
-                    string token = genToken(dt.Rows[0]["username"].ToString(), dt.Rows[0]["Permit"].ToString());
-                    dtLogin.Rows.Add(true, token);
-                    return Json<DataTable>(dtLogin);
-                }
+                    appId = Request.Headers.GetValues("app_id").First();
+                    appKey = Request.Headers.GetValues("app_key").First();
 
+                    SqlConnection con = new SqlConnection(helper.Strcon);
+                    con.Open();
+                    DataSet ds = new DataSet();
+                    SqlCommand cmd = new SqlCommand("sp_bsdMALogin", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@usn", user.Username);
+                    cmd.Parameters.AddWithValue("@pwd", user.Password);
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+
+                    #region
+                    //var Status = dt;
+                    #endregion
+                    con.Close();
+
+                    DataTable dtLogin = new DataTable();
+                    dtLogin.Columns.Add("success", typeof(bool));
+                    dtLogin.Columns.Add("token", typeof(string));
+
+                    if (dt.Rows[0]["Permit"].ToString() == "0")
+                    {
+                        dtLogin.Rows.Add(false, null);
+                        return Json<DataTable>(dtLogin);
+                    }
+                    else
+                    {
+                        string token = genToken(dt.Rows[0]["username"].ToString(), dt.Rows[0]["Permit"].ToString());
+                        dtLogin.Rows.Add(true, token);
+                        return Json<DataTable>(dtLogin);
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -466,84 +488,3 @@ namespace BsdSync.Controllers
                         public string Username { get; set; }
                         public string Password { get; set; }
                     }
-//PROCEDURE[dbo].[sp_SetNewBSDUsers]
-//@Username AS NVARCHAR(50),
-//@Password AS NVARCHAR(20),
-//@Full_name AS NVARCHAR(100),
-//@Location_ID AS NVARCHAR(10)
-//AS
-//BEGIN
-
-//        IF NOT EXISTS(SELECT* FROM tb_user_master
-//                        where username = RTRIM(@Username))
-
-//                        BEGIN
-//                            INSERT INTO tb_user_master(username, [password], full_name, location_id, created_by, created_date)
-
-//                            VALUES(@Username, @Password, @Full_name, @Location_ID,'SYSTEM', GETDATE())
-
-//                            SELECT '200' AS Result
-
-//                            RETURN
-//                        END
-
-//                        ELSE
-//                            SELECT '000' AS Result
-//END
-
-
-//CREATE PROCEDURE sp_Update_RouteSM
-//@imeiOld As NVARCHAR(MAX),
-//@imeiNew As NVARCHAR(MAX)
-//AS
-//BEGIN
-
-//    DECLARE @route_code AS NVARCHAR(35),@user_name AS NVARCHAR(35) , @password AS NVARCHAR(35)
-
-//        IF NOT EXISTS(select* from tb_mobile_register where imei = @imeiNew)
-
-//            BEGIN
-//						--Set @route_code = (select route_code from tb_mobile_register where imei =  @imeiOld)
-//						--Set @user_name = (select[user_name] from tb_mobile_register where imei = @imeiOld)
-//						--Set @password = (select[password] from tb_mobile_register where imei = @imeiOld)
-//						INSERT INTO tb_mobile_register
-//                        SELECT @imeiNew,NULL,GETDATE(), route_code,user_name,password,status,reg_id,NULL,NULL,NULL,NULL,GETDATE()
-
-//                        FROM tb_mobile_register where imei = @imeiOld
-
-
-//                        UPDATE tb_mobile_register Set route_code = NULL,
-//                        user_name = null, password = null, status = 0
-
-//                        WHERE imei = @imeiOld
-
-//                        SELECT '007' AS Result
-
-//            END
-//            ELSE
-
-//                    SELECT '000' AS Result
-//END
-
-
-//SELECT B.MasterJ AS Shop, A.[shop - name] AS ShopName , A.boxes AS Pieces FROM
-
-// (select h.origin_location_id as shop, t.location_type_name as [shop - name]
-
-//, count(distinct s.consignment_no) as [boxes]
-//from tb_batch_head as h(nolock) inner join tb_batch_detail as d(nolock) on h.batch_no = d.batch_no
-//and convert(date, h.created_date) = convert(date, getdate())
-
-//and h.status_code = 'SIP' inner join tb_route as r (nolock)
-//on r.route_code = h.route_code and r.route_type = 'SHOP'
-
-//inner join tb_location as l (nolock) on h.origin_location_id = l.location_id
-
-//and l.location_type_id in (3,4) inner join tb_location_type as t on l.location_type_id = t.location_type_id
-//inner join tb_shipment as s(nolock)
-
-//    on d.consignment_no = s.consignment_no group by h.origin_location_id, t.location_type_name )  A
-//     JOIN(SELECT TypeDesc As MasterJ FROM tb_SMLeadDetails Where[ObjID]
-//    IN (SELECT[ObjID] FROM tb_SMLead
-
-//    Where LeadName = RTRIM(@Lead) and TypeName = RTRIM(@ShopType))  ) B ON A.shop = B.MasterJ

@@ -15,7 +15,7 @@ namespace BsdSync
             // Web API routes
             var cors = new EnableCorsAttribute("*", "*", "*");
             config.EnableCors(cors);
-
+            //config.Filters.Add(new AuthorizeAttribute());
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
