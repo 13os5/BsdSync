@@ -195,24 +195,26 @@ namespace BsdSync.Controllers
         {
             try
             {
-                Request.Headers.Contains("app_id");
-                Request.Headers.Contains("app_key");
-                string appId;
-                string appKey;
+                //Request.Headers.Contains("app_id");
+                //Request.Headers.Contains("app_key");
+                //string appId;
+                //string appKey;
 
-                if (String.IsNullOrEmpty(Request.Headers.GetValues("app_id").First()) || String.IsNullOrEmpty(Request.Headers.GetValues("app_key").First()))
-                {
-                    return null;
-                }
-                else if (Request.Headers.GetValues("app_id").First() != "BSD_Service" || Request.Headers.GetValues("app_key").First() != " WarakornT13os5!#")
-                {
-                    return null;
-                }
-                else
-                {
-                    appId = Request.Headers.GetValues("app_id").First();
-                    appKey = Request.Headers.GetValues("app_key").First();
-
+                //if (String.IsNullOrEmpty(Request.Headers.GetValues("app_id").First()) || String.IsNullOrEmpty(Request.Headers.GetValues("app_key").First()))
+                //{
+                //    return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.BadRequest)));
+                //}
+                //else if (Request.Headers.GetValues("app_id").First() != "BSD_Service" || Request.Headers.GetValues("app_key").First() != "WarakornT13os5!#")
+                //{
+                //    return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.Unauthorized)));
+                //}
+                //else
+                //{
+                var response = checkRequst();
+                    //appId = Request.Headers.GetValues("app_id").First();
+                    //appKey = Request.Headers.GetValues("app_key").First();
+                if (response.result)
+                { 
                     SqlConnection con = new SqlConnection(helper.Strcon);
                     con.Open();
                     DataSet ds = new DataSet();
@@ -245,6 +247,14 @@ namespace BsdSync.Controllers
                         return Json<DataTable>(dtLogin);
                     }
                 }
+                else if (response.res == "400")
+                {
+                    return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.BadRequest)));
+                }
+                else //401
+                {
+                    return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.Unauthorized)));
+                }
             }
             catch (Exception ex)
             {
@@ -253,6 +263,50 @@ namespace BsdSync.Controllers
                 dtNew.Rows.Add("Error : " + ex.ToString());
                 return Json<DataTable>(dtNew);
             }
+        }
+
+        public Auth checkRequst()
+        {
+            Auth auth = new Auth();
+            string appId = string.Empty;
+            string appKey = string.Empty;
+
+            Request.Headers.Contains("app_id");
+            Request.Headers.Contains("app_key");
+            try
+            {
+                appId = Request.Headers.GetValues("app_id").First();
+                appKey = Request.Headers.GetValues("app_key").First();
+            }
+            catch(Exception ex)
+            {
+                auth.result = false;
+                auth.res = "400";
+            }
+
+            if (String.IsNullOrEmpty(appId) || String.IsNullOrEmpty(appKey))
+            {
+                auth.result = false;
+                auth.res = "400";
+            }
+            else
+            {
+                appId = Request.Headers.GetValues("app_id").First();
+                appKey = Request.Headers.GetValues("app_key").First();
+
+                if (appId != "BSD_Service" || appKey != "WarakornT13os5!#")
+                {
+                    auth.result = false;
+                    auth.res = "401";
+                }
+                else
+                {
+                    auth.result = true;
+                    auth.res = "200";
+                }
+            }
+
+            return auth;
         }
 
         public string genToken(string usn, string Permit)
@@ -424,6 +478,12 @@ namespace BsdSync.Controllers
 
     }
 }
+
+                    public class Auth
+                    {
+                        public bool result { get; set; }
+                        public string res { get; set; }
+                    }
 
                     public class URD
                     {
