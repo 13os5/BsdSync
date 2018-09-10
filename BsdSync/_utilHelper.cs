@@ -6,7 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 
-namespace BsdSync
+namespace BsdServiceSync
 {
     public class _utilHelper
     {

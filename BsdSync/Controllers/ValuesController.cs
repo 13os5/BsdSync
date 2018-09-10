@@ -5,7 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace BsdSync.Controllers
+namespace BsdServiceSync.Controllers
 {
     public class ValuesController : ApiController
     {
