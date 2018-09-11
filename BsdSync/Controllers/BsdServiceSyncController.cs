@@ -130,7 +130,6 @@ namespace BsdServiceSync.Controllers
         }
 
         [HttpPost]
-        //[HttpGet]
         [ActionName("UserType")]
         public IHttpActionResult UserType(URD urd)
         {
@@ -651,7 +650,134 @@ namespace BsdServiceSync.Controllers
                     DataSet ds = new DataSet();
                     SqlCommand cmd = new SqlCommand("sp_Bsd_GetRoute", con);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@RouteCode", route.RouteCode);
+                    cmd.Parameters.AddWithValue("@RouteCode", route.RouteCode == null ? "" : route.RouteCode);
+                    cmd.Parameters.AddWithValue("@Team", route.Team == null ? "" : route.Team);
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    con.Close();
+                    #region
+                    //var Status = dt;
+                    #endregion
+                    return Json<DataTable>(dt);
+                }
+                else if (response.res == "400")
+                {
+                    return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.BadRequest)));
+                }
+                else //401
+                {
+                    return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.Unauthorized)));
+                }
+            }
+            catch (Exception ex)
+            {
+                DataTable dtNew = new DataTable();
+                dtNew.Columns.Add("Result", typeof(string));
+                dtNew.Rows.Add("Error : " + ex.ToString());
+                return Json<DataTable>(dtNew);
+            }
+        }
+
+        [HttpGet]
+        [ActionName("GetTeam")]
+        public IHttpActionResult GetTeam()
+        {
+            try
+            {
+                var response = checkRequst();
+
+                if (response.result)
+                {
+                    SqlConnection con = new SqlConnection(helper.Strcon);
+                    con.Open();
+                    DataSet ds = new DataSet();
+                    SqlCommand cmd = new SqlCommand("sp_Bsd_ChangeRouteGetTeam", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    con.Close();
+                    #region
+                    //var Status = dt;
+                    #endregion
+                    return Json<DataTable>(dt);
+                }
+                else if (response.res == "400")
+                {
+                    return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.BadRequest)));
+                }
+                else //401
+                {
+                    return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.Unauthorized)));
+                }
+            }
+            catch (Exception ex)
+            {
+                DataTable dtNew = new DataTable();
+                dtNew.Columns.Add("Result", typeof(string));
+                dtNew.Rows.Add("Error : " + ex.ToString());
+                return Json<DataTable>(dtNew);
+            }
+        }
+
+        [HttpGet]
+        [ActionName("GetLocationAll")]
+        public IHttpActionResult GetLocationAll()
+        {
+            try
+            {
+                var response = checkRequst();
+
+                if (response.result)
+                {
+                    SqlConnection con = new SqlConnection(helper.Strcon);
+                    con.Open();
+                    DataSet ds = new DataSet();
+                    SqlCommand cmd = new SqlCommand("sp_Bsd_GetlocationAll", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    con.Close();
+                    #region
+                    //var Status = dt;
+                    #endregion
+                    return Json<DataTable>(dt);
+                }
+                else if (response.res == "400")
+                {
+                    return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.BadRequest)));
+                }
+                else //401
+                {
+                    return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.Unauthorized)));
+                }
+            }
+            catch (Exception ex)
+            {
+                DataTable dtNew = new DataTable();
+                dtNew.Columns.Add("Result", typeof(string));
+                dtNew.Rows.Add("Error : " + ex.ToString());
+                return Json<DataTable>(dtNew);
+            }
+        }
+
+        [HttpGet]
+        [ActionName("GetZone")]
+        public IHttpActionResult GetZone()
+        {
+            try
+            {
+                var response = checkRequst();
+
+                if (response.result)
+                {
+                    SqlConnection con = new SqlConnection(helper.Strcon);
+                    con.Open();
+                    DataSet ds = new DataSet();
+                    SqlCommand cmd = new SqlCommand("sp_Bsd_GetZone", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
                     DataTable dt = new DataTable();
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     da.Fill(dt);
@@ -738,7 +864,6 @@ public class Imei
     public string newimei { get; set; }
 }
 
-
 public class Con
 {
     public string u_id { get; set; }
@@ -760,4 +885,10 @@ public class Cons
 public class Route
 {
     public string RouteCode { get; set; }
+    public string Team { get; set; }
+}
+
+public class Zones
+{
+    public string Zone { get; set; }
 }
