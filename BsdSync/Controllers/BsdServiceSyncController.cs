@@ -804,6 +804,52 @@ namespace BsdServiceSync.Controllers
                 return Json<DataTable>(dtNew);
             }
         }
+
+        [HttpPost]
+        [ActionName("ChangeRoute")]
+        public IHttpActionResult ChangeRoute([FromBody] Route route)
+        {
+            try
+            {
+                var response = checkRequst();
+
+                if (response.result)
+                {
+                    SqlConnection con = new SqlConnection(helper.Strcon);
+                    con.Open();
+                    DataSet ds = new DataSet();
+                    SqlCommand cmd = new SqlCommand("sp_Bsd_ChangeRoute", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@RouteCode", route.RouteCode == null ? "" : route.RouteCode);
+                    cmd.Parameters.AddWithValue("@OriginLocationId", route.OriginLocalId == null ? "" : route.OriginLocalId);
+                    cmd.Parameters.AddWithValue("@Username", route.Uname);
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    con.Close();
+                    #region
+                    var Status = dt;
+                    #endregion
+                    return Json<DataTable>(Status);
+                }
+                else if (response.res == "400")
+                {
+                    return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.BadRequest)));
+                }
+                else //401
+                {
+                    return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.Unauthorized)));
+                }
+            }
+            catch (Exception ex)
+            {
+                DataTable dtNew = new DataTable();
+                dtNew.Columns.Add("Result", typeof(string));
+                dtNew.Rows.Add("Error : " + ex.ToString());
+                return Json<DataTable>(dtNew);
+
+            }
+        }
     }
 }
 
@@ -886,6 +932,8 @@ public class Route
 {
     public string RouteCode { get; set; }
     public string Team { get; set; }
+    public string OriginLocalId { get; set; }
+    public string Uname { get; set; }
 }
 
 public class Zones
