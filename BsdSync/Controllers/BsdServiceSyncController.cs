@@ -130,7 +130,6 @@ namespace BsdServiceSync.Controllers
         }
 
         [HttpPost]
-        //[HttpGet]
         [ActionName("UserType")]
         public IHttpActionResult UserType(URD urd)
         {
@@ -682,7 +681,7 @@ namespace BsdServiceSync.Controllers
 
         [HttpGet]
         [ActionName("GetTeam")]
-        public IHttpActionResult GetTeam([FromBody] Route route)
+        public IHttpActionResult GetTeam()
         {
             try
             {
@@ -694,6 +693,90 @@ namespace BsdServiceSync.Controllers
                     con.Open();
                     DataSet ds = new DataSet();
                     SqlCommand cmd = new SqlCommand("sp_Bsd_ChangeRouteGetTeam", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    con.Close();
+                    #region
+                    //var Status = dt;
+                    #endregion
+                    return Json<DataTable>(dt);
+                }
+                else if (response.res == "400")
+                {
+                    return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.BadRequest)));
+                }
+                else //401
+                {
+                    return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.Unauthorized)));
+                }
+            }
+            catch (Exception ex)
+            {
+                DataTable dtNew = new DataTable();
+                dtNew.Columns.Add("Result", typeof(string));
+                dtNew.Rows.Add("Error : " + ex.ToString());
+                return Json<DataTable>(dtNew);
+            }
+        }
+
+        [HttpGet]
+        [ActionName("GetLocationAll")]
+        public IHttpActionResult GetLocationAll()
+        {
+            try
+            {
+                var response = checkRequst();
+
+                if (response.result)
+                {
+                    SqlConnection con = new SqlConnection(helper.Strcon);
+                    con.Open();
+                    DataSet ds = new DataSet();
+                    SqlCommand cmd = new SqlCommand("sp_Bsd_GetlocationAll", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    con.Close();
+                    #region
+                    //var Status = dt;
+                    #endregion
+                    return Json<DataTable>(dt);
+                }
+                else if (response.res == "400")
+                {
+                    return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.BadRequest)));
+                }
+                else //401
+                {
+                    return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.Unauthorized)));
+                }
+            }
+            catch (Exception ex)
+            {
+                DataTable dtNew = new DataTable();
+                dtNew.Columns.Add("Result", typeof(string));
+                dtNew.Rows.Add("Error : " + ex.ToString());
+                return Json<DataTable>(dtNew);
+            }
+        }
+
+        [HttpGet]
+        [ActionName("GetZone")]
+        public IHttpActionResult GetZone()
+        {
+            try
+            {
+                var response = checkRequst();
+
+                if (response.result)
+                {
+                    SqlConnection con = new SqlConnection(helper.Strcon);
+                    con.Open();
+                    DataSet ds = new DataSet();
+                    SqlCommand cmd = new SqlCommand("sp_Bsd_GetZone", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     DataTable dt = new DataTable();
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -803,4 +886,9 @@ public class Route
 {
     public string RouteCode { get; set; }
     public string Team { get; set; }
+}
+
+public class Zones
+{
+    public string Zone { get; set; }
 }
