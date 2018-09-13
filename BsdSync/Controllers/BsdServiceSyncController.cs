@@ -850,6 +850,103 @@ namespace BsdServiceSync.Controllers
 
             }
         }
+
+        [HttpGet]
+        [ActionName("GetPayerType")]
+        public IHttpActionResult GetPayerType()
+        {
+            try
+            {
+                var response = checkRequst();
+
+                if (response.result)
+                {
+                    SqlConnection con = new SqlConnection(helper.Strcon);
+                    con.Open();
+                    DataSet ds = new DataSet();
+                    SqlCommand cmd = new SqlCommand("sp_Bsd_AddProfileGetPayerId", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    con.Close();
+                    #region
+                    //var Status = dt;
+                    #endregion
+                    return Json<DataTable>(dt);
+                }
+                else if (response.res == "400")
+                {
+                    return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.BadRequest)));
+                }
+                else //401
+                {
+                    return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.Unauthorized)));
+                }
+            }
+            catch (Exception ex)
+            {
+                DataTable dtNew = new DataTable();
+                dtNew.Columns.Add("Result", typeof(string));
+                dtNew.Rows.Add("Error : " + ex.ToString());
+                return Json<DataTable>(dtNew);
+            }
+        }
+
+        [HttpPost]
+        [ActionName("AddProfile")]
+        public IHttpActionResult AddProfile([FromBody] Profile profile)
+        {
+            try
+            {
+                var response = checkRequst();
+
+                if (response.result)
+                {
+                    SqlConnection con = new SqlConnection(helper.Strcon);
+                    con.Open();
+                    DataSet ds = new DataSet();
+                    SqlCommand cmd = new SqlCommand("sp_Bsd_AddProfile", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@profile_id", profile.profile_id);
+                    cmd.Parameters.AddWithValue("@profile_name", profile.profile_name);
+                    cmd.Parameters.AddWithValue("@payer_id", profile.payer_id);
+                    cmd.Parameters.AddWithValue("@booking_type", profile.booking_type);
+                    cmd.Parameters.AddWithValue("@sender_name", profile.sender_name);
+                    cmd.Parameters.AddWithValue("@sender_address1", profile.sender_address1);
+                    cmd.Parameters.AddWithValue("@sender_address2", profile.sender_address2);
+                    cmd.Parameters.AddWithValue("@sender_zipcode", profile.sender_zipcode);
+                    cmd.Parameters.AddWithValue("@sender_mobile", profile.sender_mobile);
+                    cmd.Parameters.AddWithValue("@profile_skipped", profile.profile_skipped);
+                    cmd.Parameters.AddWithValue("@profile_restricted", profile.profile_restricted);
+                    cmd.Parameters.AddWithValue("@sender_idcard", profile.sender_idcard);
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    con.Close();
+                    #region
+                    var Status = dt;
+                    #endregion
+                    return Json<DataTable>(Status);
+                }
+                else if (response.res == "400")
+                {
+                    return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.BadRequest)));
+                }
+                else //401
+                {
+                    return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.Unauthorized)));
+                }
+            }
+            catch (Exception ex)
+            {
+                DataTable dtNew = new DataTable();
+                dtNew.Columns.Add("Result", typeof(string));
+                dtNew.Rows.Add("Error : " + ex.ToString());
+                return Json<DataTable>(dtNew);
+
+            }
+        }
     }
 }
 
@@ -939,4 +1036,20 @@ public class Route
 public class Zones
 {
     public string Zone { get; set; }
+}
+
+public class Profile
+{
+    public string profile_id { get; set; }
+    public string profile_name { get; set; }
+    public string payer_id { get; set; }
+    public string booking_type { get; set; }
+    public string sender_name { get; set; }
+    public string sender_address1 { get; set; }
+    public string sender_address2 { get; set; }
+    public string sender_zipcode { get; set; }
+    public string sender_mobile { get; set; }
+    public string profile_skipped { get; set; }
+    public string profile_restricted { get; set; }
+    public string sender_idcard { get; set; }
 }
