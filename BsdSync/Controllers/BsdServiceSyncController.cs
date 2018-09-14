@@ -947,6 +947,95 @@ namespace BsdServiceSync.Controllers
 
             }
         }
+
+        [HttpPost]
+        [ActionName("GetInFoData")]
+        public IHttpActionResult GetInFoData([FromBody] SIPCons SipCons)
+        {
+            try
+            {
+                var response = checkRequst();
+
+                if (response.result)
+                {
+                    SqlConnection con = new SqlConnection(helper.Strcon);
+                    con.Open();
+                    DataSet ds = new DataSet();
+                    SqlCommand cmd = new SqlCommand("sp_Bsd_SIPConsignmentGetInfoData", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@BookingNo", SipCons.BookingNo);
+                    cmd.Parameters.AddWithValue("@Date", SipCons.Date);
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    con.Close();
+                    #region
+                    var Status = dt;
+                    #endregion
+                    return Json<DataTable>(Status);
+                }
+                else if (response.res == "400")
+                {
+                    return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.BadRequest)));
+                }
+                else //401
+                {
+                    return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.Unauthorized)));
+                }
+            }
+            catch (Exception ex)
+            {
+                DataTable dtNew = new DataTable();
+                dtNew.Columns.Add("Result", typeof(string));
+                dtNew.Rows.Add("Error : " + ex.ToString());
+                return Json<DataTable>(dtNew);
+
+            }
+        }
+
+        [HttpPost]
+        [ActionName("SIPCons")]
+        public IHttpActionResult SIPCons([FromBody] SIPCons SipCons)
+        {
+            try
+            {
+                var response = checkRequst();
+
+                if (response.result)
+                {
+                    SqlConnection con = new SqlConnection(helper.Strcon);
+                    con.Open();
+                    DataSet ds = new DataSet();
+                    SqlCommand cmd = new SqlCommand("sp_Bsd_SIPConsignment", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@RecordId", SipCons.RecordId);
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    con.Close();
+                    #region
+                    var Status = dt;
+                    #endregion
+                    return Json<DataTable>(Status);
+                }
+                else if (response.res == "400")
+                {
+                    return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.BadRequest)));
+                }
+                else //401
+                {
+                    return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.Unauthorized)));
+                }
+            }
+            catch (Exception ex)
+            {
+                DataTable dtNew = new DataTable();
+                dtNew.Columns.Add("Result", typeof(string));
+                dtNew.Rows.Add("Error : " + ex.ToString());
+                return Json<DataTable>(dtNew);
+
+            }
+        }
     }
 }
 
@@ -1052,4 +1141,11 @@ public class Profile
     public string profile_skipped { get; set; }
     public string profile_restricted { get; set; }
     public string sender_idcard { get; set; }
+}
+
+public class SIPCons
+{
+    public string BookingNo { get; set; }
+    public string Date { get; set; }
+    public string RecordId { get; set; }
 }
