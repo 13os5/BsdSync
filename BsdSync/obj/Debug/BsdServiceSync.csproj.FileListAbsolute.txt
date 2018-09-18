@@ -644,7 +644,6 @@ D:\BsdServiceSync\BsdSync\bin\Microsoft.AI.DependencyCollector.xml
 D:\BsdServiceSync\BsdSync\bin\Microsoft.AI.WindowsServer.xml
 D:\BsdServiceSync\BsdSync\bin\Microsoft.AI.Web.xml
 D:\BsdServiceSync\BsdSync\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\BsdServiceSync\BsdSync\obj\Debug\BsdServiceSync.csprojAssemblyReference.cache
 D:\BsdServiceSync\BsdSync\obj\Debug\BsdServiceSync.csproj.CoreCompileInputs.cache
 D:\BsdServiceSync\BsdSync\obj\Debug\BsdServiceSync.csproj.CopyComplete
 D:\BsdServiceSync\BsdSync\obj\Debug\BsdServiceSync.dll
@@ -866,3 +865,4 @@ D:\Kerry\BsdServiceSync\BsdSync\obj\Debug\BsdServiceSync.csproj.CoreCompileInput
 D:\Kerry\BsdServiceSync\BsdSync\obj\Debug\BsdServiceSync.csproj.CopyComplete
 D:\Kerry\BsdServiceSync\BsdSync\obj\Debug\BsdServiceSync.dll
 D:\Kerry\BsdServiceSync\BsdSync\obj\Debug\BsdServiceSync.pdb
+D:\BsdServiceSync\BsdSync\obj\Debug\BsdServiceSync.csprojAssemblyReference.cache
