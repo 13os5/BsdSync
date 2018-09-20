@@ -235,6 +235,7 @@ namespace BsdServiceSync.Controllers
                     cmd.Parameters.AddWithValue("@chkRDM", userP.chkRDM);
                     cmd.Parameters.AddWithValue("@chkRFC", userP.chkRFC);
                     cmd.Parameters.AddWithValue("@chkRMP", userP.chkRMP);
+                    cmd.Parameters.AddWithValue("@UpdateBy", userP.UpdateBy);
                     DataTable dt = new DataTable();
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     da.Fill(dt);
@@ -919,7 +920,8 @@ namespace BsdServiceSync.Controllers
                     cmd.Parameters.AddWithValue("@sender_mobile", profile.sender_mobile);
                     cmd.Parameters.AddWithValue("@profile_skipped", profile.profile_skipped);
                     cmd.Parameters.AddWithValue("@profile_restricted", profile.profile_restricted);
-                    cmd.Parameters.AddWithValue("@sender_idcard", profile.sender_idcard);
+                    cmd.Parameters.AddWithValue("@sender_idcard", profile.sender_idcard == null ? "" : profile.sender_idcard);
+                    cmd.Parameters.AddWithValue("@create_by", profile.Uname);
                     DataTable dt = new DataTable();
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     da.Fill(dt);
@@ -1097,6 +1099,7 @@ namespace BsdServiceSync.Controllers
                     cmd.Parameters.AddWithValue("@Imei", UMobile.Imei);
                     cmd.Parameters.AddWithValue("@RouteCode", UMobile.RouteCode);
                     cmd.Parameters.AddWithValue("@IsDelete", UMobile.IsDelete);
+                    cmd.Parameters.AddWithValue("@Create_by", UMobile.Uname);
                     DataTable dt = new DataTable();
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     da.Fill(dt);
@@ -1291,6 +1294,7 @@ public class BsdInsertUserPermission
     public bool chkRDM { get; set; }
     public bool chkRFC { get; set; }
     public bool chkRMP { get; set; }
+    public string UpdateBy { get; set; }
 }
 
 public class BsdUpdateUserPermission
@@ -1357,6 +1361,7 @@ public class Profile
     public string profile_skipped { get; set; }
     public string profile_restricted { get; set; }
     public string sender_idcard { get; set; }
+    public string Uname { get; set; }
 }
 
 public class SIPCons
@@ -1371,4 +1376,5 @@ public class UpdateMobile
     public string Imei { get; set; }
     public string RouteCode { get; set; }
     public bool IsDelete { get; set; }
+    public string Uname { get; set; }
 }
