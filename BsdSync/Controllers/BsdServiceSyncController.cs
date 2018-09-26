@@ -235,6 +235,7 @@ namespace BsdServiceSync.Controllers
                     cmd.Parameters.AddWithValue("@chkRDM", userP.chkRDM);
                     cmd.Parameters.AddWithValue("@chkRFC", userP.chkRFC);
                     cmd.Parameters.AddWithValue("@chkRMP", userP.chkRMP);
+                    cmd.Parameters.AddWithValue("@chkPCP", userP.chkPCP);
                     cmd.Parameters.AddWithValue("@UpdateBy", userP.UpdateBy);
                     DataTable dt = new DataTable();
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -287,6 +288,7 @@ namespace BsdServiceSync.Controllers
                     cmd.Parameters.AddWithValue("@chkRDM", userP.chkRDM);
                     cmd.Parameters.AddWithValue("@chkRFC", userP.chkRFC);
                     cmd.Parameters.AddWithValue("@chkRMP", userP.chkRMP);
+                    cmd.Parameters.AddWithValue("@chkPCP", userP.chkPCP);
                     DataTable dt = new DataTable();
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     da.Fill(dt);
@@ -1380,6 +1382,7 @@ public class BsdInsertUserPermission
     public bool chkRDM { get; set; }
     public bool chkRFC { get; set; }
     public bool chkRMP { get; set; }
+    public bool chkPCP { get; set; }
     public string UpdateBy { get; set; }
 }
 
@@ -1393,6 +1396,7 @@ public class BsdUpdateUserPermission
     public bool chkPMP { get; set; }
     public bool chkRDM { get; set; }
     public bool chkRFC { get; set; }
+    public bool chkPCP { get; set; }
     public bool chkRMP { get; set; }
 }
 
