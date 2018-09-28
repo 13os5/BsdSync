@@ -317,9 +317,176 @@ namespace BsdServiceSync.Controllers
         }
 
         [HttpPost]
+        [ActionName("GetUserPermissionT")]
+        public IHttpActionResult GetUserPermissionT([FromBody] GetPermission user)
+        {
+            try
+            {
+                var response = checkRequst();
+
+                if (response.result)
+                {
+                    SqlConnection con = new SqlConnection(helper.Strcon);
+                    con.Open();
+                    DataSet ds = new DataSet();
+                    SqlCommand cmd = new SqlCommand("sp_GetUserPermissionT", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Username", user.Username);
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    con.Close();
+                    #region
+                    var Status = dt;
+                    #endregion
+                    return Json<DataTable>(Status);
+                }
+                else if (response.res == "400")
+                {
+                    return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.BadRequest)));
+                }
+                else //401
+                {
+                    return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.Unauthorized)));
+                }
+            }
+            catch (Exception ex)
+            {
+                DataTable dtNew = new DataTable();
+                dtNew.Columns.Add("Result", typeof(string));
+                dtNew.Rows.Add("Error : " + ex.ToString());
+                return Json<DataTable>(dtNew);
+
+            }
+        }
+
+        [HttpPost]
+        [ActionName("InsertPermissionT")]
+        public IHttpActionResult CUserPermissionT([FromBody] BsdInsertUserPermissionT userP)
+        {
+            try
+            {
+                var response = checkRequst();
+
+                if (response.result)
+                {
+                    SqlConnection con = new SqlConnection(helper.Strcon);
+                    con.Open();
+                    DataSet ds = new DataSet();
+                    SqlCommand cmd = new SqlCommand("sp_InsertBSDUsersPermissionT", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Username", userP.Username);
+                    cmd.Parameters.AddWithValue("@tChkAP", userP.tChkAP);
+                    cmd.Parameters.AddWithValue("@tChkCC", userP.tChkCC);
+                    cmd.Parameters.AddWithValue("@tChkCR", userP.tChkCR);
+                    cmd.Parameters.AddWithValue("@tChkCU", userP.tChkCU);
+                    cmd.Parameters.AddWithValue("@tChkRBB", userP.tChkRBB);
+                    cmd.Parameters.AddWithValue("@tChkRM", userP.tChkRM);
+                    cmd.Parameters.AddWithValue("@tChkRP", userP.tChkRP);
+                    cmd.Parameters.AddWithValue("@tChkSC", userP.tChkSC);
+                    cmd.Parameters.AddWithValue("@tChkUM", userP.tChkUM);
+                    cmd.Parameters.AddWithValue("@tChkUP", userP.tChkUP);
+                    cmd.Parameters.AddWithValue("@tChkUPBS", userP.tChkUPBS);
+                    cmd.Parameters.AddWithValue("@UpdateBy", userP.UpdateBy);
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    con.Close();
+                    #region
+                    var Status = dt;
+                    #endregion
+                    return Json<DataTable>(Status);
+                }
+                else if (response.res == "400")
+                {
+                    return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.BadRequest)));
+                }
+                else //401
+                {
+                    return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.Unauthorized)));
+                }
+            }
+            catch (Exception ex)
+            {
+                DataTable dtNew = new DataTable();
+                dtNew.Columns.Add("Result", typeof(string));
+                dtNew.Rows.Add("Error : " + ex.ToString());
+                return Json<DataTable>(dtNew);
+            }
+        }
+
+        [HttpPost]
+        [ActionName("UpdatePermissionT")]
+        public IHttpActionResult UUserPermissionT([FromBody] BsdUpdateUserPermissionT userP)
+        {
+            try
+            {
+                var response = checkRequst();
+
+                if (response.result)
+                {
+                    SqlConnection con = new SqlConnection(helper.Strcon);
+                    con.Open();
+                    DataSet ds = new DataSet();
+                    SqlCommand cmd = new SqlCommand("sp_UpdateBSDUsersPermissionT", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Username", userP.Username);
+                    cmd.Parameters.AddWithValue("@UpdateBy", userP.UpdateBy);
+                    cmd.Parameters.AddWithValue("@tChkAP", userP.tChkAP);
+                    cmd.Parameters.AddWithValue("@tChkCC", userP.tChkCC);
+                    cmd.Parameters.AddWithValue("@tChkCR", userP.tChkCR);
+                    cmd.Parameters.AddWithValue("@tChkCU", userP.tChkCU);
+                    cmd.Parameters.AddWithValue("@tChkRBB", userP.tChkRBB);
+                    cmd.Parameters.AddWithValue("@tChkRM", userP.tChkRM);
+                    cmd.Parameters.AddWithValue("@tChkRP", userP.tChkRP);
+                    cmd.Parameters.AddWithValue("@tChkSC", userP.tChkSC);
+                    cmd.Parameters.AddWithValue("@tChkUM", userP.tChkUM);
+                    cmd.Parameters.AddWithValue("@tChkUP", userP.tChkUP);
+                    cmd.Parameters.AddWithValue("@tChkUPBS", userP.tChkUPBS);
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    con.Close();
+                    #region
+                    var Status = dt;
+                    #endregion
+                    return Json<DataTable>(Status);
+                }
+                else if (response.res == "400")
+                {
+                    return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.BadRequest)));
+                }
+                else //401
+                {
+                    return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.Unauthorized)));
+                }
+            }
+            catch (Exception ex)
+            {
+                DataTable dtNew = new DataTable();
+                dtNew.Columns.Add("Result", typeof(string));
+                dtNew.Rows.Add("Error : " + ex.ToString());
+                return Json<DataTable>(dtNew);
+            }
+        }
+
+        [HttpPost]
         [ActionName("Login")]
         public IHttpActionResult Login([FromBody] UserLogin user)
         {
+            UserLogin Permission = new UserLogin();
+            Permission.AddProfile = false;
+            Permission.ChangeCons = false;
+            Permission.ChangeRoute = false;
+            Permission.CreateUser = false;
+            Permission.RptBsdBooking = false;
+            Permission.RptMsp = false;
+            Permission.RptProfile = false;
+            Permission.SipCons = false;
+            Permission.UpdateMobile = false;
+            Permission.UpdatePermission = false;
+            Permission.UpdatePermissionTool = false;
+
             try
             {
                 var response = checkRequst();
@@ -337,6 +504,55 @@ namespace BsdServiceSync.Controllers
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     da.Fill(dt);
 
+                    if (dt.Rows.Count > 0)
+                    {
+                        Permission.Role = dt.Rows[0]["role"].ToString();
+                        if (dt.Rows[0]["Permit"].ToString() != "0")
+                        {
+                            int c = 0;
+                            foreach (DataRow dr in dt.Rows)
+                            {
+                                switch (dt.Rows[c]["Permission"].ToString())
+                                {
+                                    case "AddProfile":
+                                        Permission.AddProfile = true;
+                                        break;
+                                    case "ChangeCons":
+                                        Permission.ChangeCons = true;
+                                        break;
+                                    case "ChangeRoute":
+                                        Permission.ChangeRoute = true;
+                                        break;
+                                    case "CreateUser":
+                                        Permission.CreateUser = true;
+                                        break;
+                                    case "RptBsdBooking":
+                                        Permission.RptBsdBooking = true;
+                                        break;
+                                    case "RptMsp":
+                                        Permission.RptMsp = true;
+                                        break;
+                                    case "RptProfile":
+                                        Permission.RptProfile = true;
+                                        break;
+                                    case "SipCons":
+                                        Permission.SipCons = true;
+                                        break;
+                                    case "UpdateMobile":
+                                        Permission.UpdateMobile = true;
+                                        break;
+                                    case "UpdatePermission":
+                                        Permission.UpdatePermission = true;
+                                        break;
+                                    case "UpdatePermissionTool":
+                                        Permission.UpdatePermissionTool = true;
+                                        break;
+                                }
+                                c++;
+                            }
+                        }
+                    }
+                    
                     #region
                     //var Status = dt;
                     #endregion
@@ -353,7 +569,7 @@ namespace BsdServiceSync.Controllers
                     }
                     else
                     {
-                        string token = genToken(dt.Rows[0]["username"].ToString(), dt.Rows[0]["Permit"].ToString());
+                        string token = genToken(dt.Rows[0]["username"].ToString(), dt.Rows[0]["Permit"].ToString(), Permission);
                         dtLogin.Rows.Add(true, token);
                         return Json<DataTable>(dtLogin);
                     }
@@ -422,7 +638,7 @@ namespace BsdServiceSync.Controllers
             return auth;
         }
 
-        public string genToken(string usn, string Permit)
+        public string genToken(string usn, string Permit, UserLogin Permission)
         {
             string key = " WarakornT.!#~ WarakornT.!~% WarakornT.!@~ WarakornT.!!~ WarakornT.!&~ WarakornT.!~~!@#!";
 
@@ -433,9 +649,20 @@ namespace BsdServiceSync.Controllers
             var header = new JwtHeader(credentials);
 
             var payload = new JwtPayload
-            {
-               { "name", usn},
-               { "role", Permit} // 0 = not permit, 1 = admin, 2 = RD, 3 = Extra user
+            { 
+               { "name", usn },
+               { "role", Permission.Role },
+               { "AddProfile", Permission.AddProfile },
+               { "ChangeCons", Permission.ChangeCons },
+               { "ChangeRoute", Permission.ChangeRoute },
+               { "CreateUser", Permission.CreateUser },
+               { "RptBsdBooking", Permission.RptBsdBooking },
+               { "RptMsp", Permission.RptMsp },
+               { "RptProfile", Permission.RptProfile },
+               { "SipCons", Permission.SipCons },
+               { "UpdateMobile", Permission.UpdateMobile },
+               { "UpdatePermission", Permission.UpdatePermission },
+               { "UpdatePermissionTool", Permission.UpdatePermissionTool }
             };
 
             var secToken = new JwtSecurityToken(header, payload);
@@ -1400,6 +1627,40 @@ public class BsdUpdateUserPermission
     public bool chkRMP { get; set; }
 }
 
+public class BsdInsertUserPermissionT
+{
+    public string Username { get; set; }
+    public bool tChkAP { get; set; }
+    public bool tChkCC { get; set; }
+    public bool tChkCR { get; set; }
+    public bool tChkCU { get; set; }
+    public bool tChkRBB { get; set; }
+    public bool tChkRM { get; set; }
+    public bool tChkRP { get; set; }
+    public bool tChkSC { get; set; }
+    public bool tChkUM { get; set; }
+    public bool tChkUP { get; set; }
+    public bool tChkUPBS { get; set; }
+    public string UpdateBy { get; set; }
+}
+
+public class BsdUpdateUserPermissionT
+{
+    public string Username { get; set; }
+    public string UpdateBy { get; set; }
+    public bool tChkAP { get; set; }
+    public bool tChkCC { get; set; }
+    public bool tChkCR { get; set; }
+    public bool tChkCU { get; set; }
+    public bool tChkRBB { get; set; }
+    public bool tChkRM { get; set; }
+    public bool tChkRP { get; set; }
+    public bool tChkSC { get; set; }
+    public bool tChkUM { get; set; }
+    public bool tChkUP { get; set; }
+    public bool tChkUPBS { get; set; }
+}
+
 public class Imei
 {
     public string oldimei { get; set; }
@@ -1417,6 +1678,18 @@ public class UserLogin
 {
     public string Username { get; set; }
     public string Password { get; set; }
+    public bool AddProfile { get; set; }
+    public bool ChangeCons { get; set; }
+    public bool ChangeRoute { get; set; }
+    public bool CreateUser { get; set; }
+    public bool RptBsdBooking { get; set; }
+    public bool RptMsp { get; set; }
+    public bool RptProfile { get; set; }
+    public bool SipCons { get; set; }
+    public bool UpdateMobile { get; set; }
+    public bool UpdatePermission { get; set; }
+    public bool UpdatePermissionTool { get; set; }
+    public string Role { get; set; }
 }
 
 public class Cons
