@@ -28,15 +28,17 @@ namespace BsdServiceSync.Controllers
 
             if (response.result)
             {
-                SqlConnection con = new SqlConnection(helper.Strcon);
-                con.Open();
-                SqlCommand cmd = new SqlCommand("sp_BSD_Get_adminList", con);
-                cmd.CommandType = CommandType.StoredProcedure;
-                DataTable dt = new DataTable();
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(dt);
-                con.Close();
-                return Json<DataTable>(dt);
+                using (DBManage dbm = new DBManage())
+                {
+                    try
+                    {
+                        return Json<DataTable>(dbm.ExecuteDataTableStored(new SqlCommand("sp_BSD_Get_adminList")));
+                    }
+                    catch (Exception ex)
+                    {
+                        return Json<string>(Convert.ToString(ex));
+                    }
+                }
             }
             else if (response.res == "400")
             {
@@ -56,19 +58,24 @@ namespace BsdServiceSync.Controllers
 
             if (response.result)
             {
-                SqlConnection con = new SqlConnection(helper.Strcon);
-                con.Open();
-                SqlCommand cmd = new SqlCommand("sp_BSD_GetReport", con);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@CreateBy", CreateBy.ToString().Trim());
-                cmd.Parameters.AddWithValue("@StartDate", StartDate.ToString().Trim());
-                cmd.Parameters.AddWithValue("@EndDate", EndDate.ToString().Trim());
-                DataTable dt = new DataTable();
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(dt);
-                con.Close();
-                return Json<DataTable>(dt);
+                using (DBManage dbm = new DBManage())
+                {
+                    using (SqlCommand cmd = new SqlCommand("sp_BSD_GetReport"))
+                    {
+                        try
+                        {
+                            cmd.Parameters.Clear();
+                            cmd.Parameters.AddWithValue("@CreateBy", CreateBy.ToString().Trim());
+                            cmd.Parameters.AddWithValue("@StartDate", StartDate.ToString().Trim());
+                            cmd.Parameters.AddWithValue("@EndDate", EndDate.ToString().Trim());
+                            return Json<DataTable>(dbm.ExecuteDataTableStored(cmd));
+                        }
+                        catch (Exception ex)
+                        {
+                            return Json<string>(Convert.ToString(ex));
+                        }
+                    }
+                }
             }
             else if (response.res == "400")
             {
@@ -90,25 +97,26 @@ namespace BsdServiceSync.Controllers
 
                 if (response.result)
                 {
-                    SqlConnection con = new SqlConnection(helper.Strcon);
-                    con.Open();
-                    DataSet ds = new DataSet();
-                    SqlCommand cmd = new SqlCommand("sp_SetNewBSDServiceUsers", con);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@Username", user.Username);
-                    cmd.Parameters.AddWithValue("@Password", user.Password);
-                    cmd.Parameters.AddWithValue("@Full_name", user.Full_name);
-                    cmd.Parameters.AddWithValue("@Location_ID", user.Location_ID);
-                    cmd.Parameters.AddWithValue("@UserType", user.UserType);
-                    cmd.Parameters.AddWithValue("@CreateBy", user.CreateBy);
-                    DataTable dt = new DataTable();
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    da.Fill(dt);
-                    con.Close();
-                    #region
-                    var Status = dt;
-                    #endregion
-                    return Json<DataTable>(Status);
+                    using (DBManage dbm = new DBManage())
+                    {
+                        using (SqlCommand cmd = new SqlCommand("sp_SetNewBSDServiceUsers"))
+                        {
+                            try
+                            {
+                                cmd.Parameters.AddWithValue("@Username", user.Username);
+                                cmd.Parameters.AddWithValue("@Password", user.Password);
+                                cmd.Parameters.AddWithValue("@Full_name", user.Full_name);
+                                cmd.Parameters.AddWithValue("@Location_ID", user.Location_ID);
+                                cmd.Parameters.AddWithValue("@UserType", user.UserType);
+                                cmd.Parameters.AddWithValue("@CreateBy", user.CreateBy);
+                                return Json<DataTable>(dbm.ExecuteDataTableStored(cmd));
+                            }
+                            catch (Exception ex)
+                            {
+                                return Json<string>(Convert.ToString(ex));
+                            }
+                        }
+                    }
                 }
                 else if (response.res == "400")
                 {
@@ -486,6 +494,7 @@ namespace BsdServiceSync.Controllers
             Permission.UpdateMobile = false;
             Permission.UpdatePermission = false;
             Permission.UpdatePermissionTool = false;
+            Permission.AddConToBatch = false;
 
             try
             {
@@ -496,13 +505,18 @@ namespace BsdServiceSync.Controllers
                     SqlConnection con = new SqlConnection(helper.Strcon);
                     con.Open();
                     DataSet ds = new DataSet();
-                    SqlCommand cmd = new SqlCommand("sp_bsdMALogin", con);
+                    SqlCommand cmd = new SqlCommand("sp_bsdMALoginTools", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@usn", user.Username);
                     cmd.Parameters.AddWithValue("@pwd", user.Password);
                     DataTable dt = new DataTable();
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     da.Fill(dt);
+
+                    //DBManage db = new DBManage();
+                    //db.Dispose();
+
+                    //dt = new DataTable();
 
                     if (dt.Rows.Count > 0)
                     {
@@ -547,15 +561,15 @@ namespace BsdServiceSync.Controllers
                                     case "UpdatePermissionTool":
                                         Permission.UpdatePermissionTool = true;
                                         break;
+                                    case "AddConToBatch":
+                                        Permission.AddConToBatch = true;
+                                        break;
                                 }
                                 c++;
                             }
                         }
                     }
-                    
-                    #region
-                    //var Status = dt;
-                    #endregion
+
                     con.Close();
 
                     DataTable dtLogin = new DataTable();
@@ -622,7 +636,7 @@ namespace BsdServiceSync.Controllers
             {
                 appId = Request.Headers.GetValues("app_id").First();
                 appKey = Request.Headers.GetValues("app_key").First();
-                
+
                 if (appId != id || appKey != key)
                 {
                     auth.result = false;
@@ -649,7 +663,7 @@ namespace BsdServiceSync.Controllers
             var header = new JwtHeader(credentials);
 
             var payload = new JwtPayload
-            { 
+            {
                { "name", usn },
                { "role", Permission.Role },
                { "AddProfile", Permission.AddProfile },
@@ -662,7 +676,8 @@ namespace BsdServiceSync.Controllers
                { "SipCons", Permission.SipCons },
                { "UpdateMobile", Permission.UpdateMobile },
                { "UpdatePermission", Permission.UpdatePermission },
-               { "UpdatePermissionTool", Permission.UpdatePermissionTool }
+               { "UpdatePermissionTool", Permission.UpdatePermissionTool },
+               { "AddConToBatch", Permission.AddConToBatch }
             };
 
             var secToken = new JwtSecurityToken(header, payload);
@@ -716,6 +731,56 @@ namespace BsdServiceSync.Controllers
                 dtNew.Rows.Add("Error : " + ex.ToString());
                 return Json<DataTable>(dtNew);
             }
+            //using (DBManage db = new DBManage())
+            //{
+            //    ResponseResult result = new ResponseResult();
+            //    try
+            //    {
+            //        var response = checkRequst();
+            //        if (response.result)
+            //        {
+            //            SqlCommand cmd = new SqlCommand("sp_BSDServicegetUser");
+            //            cmd.CommandType = CommandType.StoredProcedure;
+            //            cmd.Parameters.AddWithValue("@URD", URD.uRD);
+
+            //            DataTable dt = new DataTable();
+
+            //            dt = db.ExecuteDataTable(cmd);
+            //            if (dt.Rows.Count > 0)
+            //            {
+            //                result.result = true;
+            //                result.errorcode = "";
+            //                result.errormessage = "";
+            //                result.dataresult = dt;
+            //            }
+            //            else
+            //            {
+
+            //            }
+
+            //            return Json<DataTable>(dt);
+            //        }
+            //        else if (response.res == "400")
+            //        {
+            //            return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.BadRequest)));
+            //        }
+            //        else //401
+            //        {
+            //            return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.Unauthorized)));
+            //        }
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        DataTable dtNew = new DataTable();
+            //        dtNew.Columns.Add("Result", typeof(string));
+            //        dtNew.Rows.Add("Error : " + ex.ToString());
+            //        return Json<DataTable>(dtNew);
+            //    }
+            //    finally
+            //    {
+            //        return Json<ResponseResult>(result);
+            //    }
+            //}
         }
 
         [HttpPost]
@@ -1231,32 +1296,43 @@ namespace BsdServiceSync.Controllers
             try
             {
                 var response = checkRequst();
+                DataTable Status = new DataTable();
+                using (DBManage dbm = new DBManage(true))
+                {
+                    if (response.result)
+                    {
 
-                if (response.result)
-                {
-                    SqlConnection con = new SqlConnection(helper.Strcon);
-                    con.Open();
-                    DataSet ds = new DataSet();
-                    SqlCommand cmd = new SqlCommand("sp_Bsd_SIPConsignment", con);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@RecordId", SipCons.RecordId);
-                    DataTable dt = new DataTable();
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    da.Fill(dt);
-                    con.Close();
-                    #region
-                    var Status = dt;
-                    #endregion
-                    return Json<DataTable>(Status);
+                        using (SqlCommand cmd = new SqlCommand("sp_Bsd_SIPConsignment"))
+                        {
+                            try
+                            {
+                                string[] txtSplit = SipCons.RecordId.Split(',');
+                                for (int i = 0; i < txtSplit.Length; i++)
+                                {
+                                    string x = Convert.ToString(txtSplit[i]);
+                                    cmd.Parameters.Clear();
+                                    cmd.Parameters.AddWithValue("@RecordId", Convert.ToString(txtSplit[i]));
+                                    Status = dbm.ExecuteDataTableStored(cmd);
+                                }
+                                dbm.TransactionCommit();
+                            }
+                            catch (Exception ex)
+                            {
+                                dbm.TransactionRollBack();
+                                return Json<string>(Convert.ToString(ex));
+                            }
+                        }
+                    }
+                    else if (response.res == "400")
+                    {
+                        return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.BadRequest)));
+                    }
+                    else //401
+                    {
+                        return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.Unauthorized)));
+                    }
                 }
-                else if (response.res == "400")
-                {
-                    return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.BadRequest)));
-                }
-                else //401
-                {
-                    return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.Unauthorized)));
-                }
+                return Json<DataTable>(Status);
             }
             catch (Exception ex)
             {
@@ -1264,7 +1340,6 @@ namespace BsdServiceSync.Controllers
                 dtNew.Columns.Add("Result", typeof(string));
                 dtNew.Rows.Add("Error : " + ex.ToString());
                 return Json<DataTable>(dtNew);
-
             }
         }
 
@@ -1570,6 +1645,47 @@ namespace BsdServiceSync.Controllers
 
             }
         }
+
+        [HttpPost]
+        [ActionName("AddConToBatch")]
+        public IHttpActionResult AddConToBatch([FromBody] AddConToBatch actb)
+        {
+            try
+            {
+                var response = checkRequst();
+
+                if (response.result)
+                {
+                    SqlConnection con = new SqlConnection(helper.Strcon);
+                    con.Open();
+                    DataSet ds = new DataSet();
+                    SqlCommand cmd = new SqlCommand("sp_Bsd_Addcontobatch", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Batch_no", actb.batchNo);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    con.Close();
+                    return Json<DataTable>(dt);
+                }
+                else if (response.res == "400")
+                {
+                    return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.BadRequest)));
+                }
+                else //401
+                {
+                    return Json<string>(Convert.ToString(Request.CreateResponse(HttpStatusCode.Unauthorized)));
+                }
+            }
+            catch (Exception ex)
+            {
+                DataTable dtNew = new DataTable();
+                dtNew.Columns.Add("Result", typeof(string));
+                dtNew.Rows.Add("Error : " + ex.ToString());
+                return Json<DataTable>(dtNew);
+
+            }
+        }
     }
 }
 
@@ -1689,6 +1805,7 @@ public class UserLogin
     public bool UpdateMobile { get; set; }
     public bool UpdatePermission { get; set; }
     public bool UpdatePermissionTool { get; set; }
+    public bool AddConToBatch { get; set; }
     public string Role { get; set; }
 }
 
@@ -1755,3 +1872,16 @@ public class RptProfile
     public string DateFrom { get; set; }
     public string DateTo { get; set; }
 }
+
+public class AddConToBatch
+{
+    public string batchNo { get; set; }
+}
+
+//public class ResponseResult
+//{
+//    public bool result = false;
+//    public string errorcode = "";
+//    public string errormessage = "";
+//    public object dataresult;
+//}

@@ -1,0 +1,6 @@
+D:\BsdServiceSync\KE.LibraryAPI\bin\Debug\KE.LibraryAPI.dll
+D:\BsdServiceSync\KE.LibraryAPI\bin\Debug\KE.LibraryAPI.pdb
+D:\BsdServiceSync\KE.LibraryAPI\obj\Debug\KE.LibraryAPI.csproj.CoreCompileInputs.cache
+D:\BsdServiceSync\KE.LibraryAPI\obj\Debug\KE.LibraryAPI.dll
+D:\BsdServiceSync\KE.LibraryAPI\obj\Debug\KE.LibraryAPI.pdb
+D:\BsdServiceSync\KE.LibraryAPI\obj\Debug\KE.LibraryAPI.csprojAssemblyReference.cache

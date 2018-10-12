@@ -1,0 +1,13 @@
+D:\BsdServiceSync\EncryptDecryptConStr\obj\Debug\EncryptDecryptConStr.Form1.resources
+D:\BsdServiceSync\EncryptDecryptConStr\obj\Debug\EncryptDecryptConStr.Properties.Resources.resources
+D:\BsdServiceSync\EncryptDecryptConStr\obj\Debug\EncryptDecryptConStr.csproj.GenerateResource.cache
+D:\BsdServiceSync\EncryptDecryptConStr\obj\Debug\EncryptDecryptConStr.csproj.CoreCompileInputs.cache
+D:\BsdServiceSync\EncryptDecryptConStr\bin\Debug\EncryptDecryptConStr.exe.config
+D:\BsdServiceSync\EncryptDecryptConStr\bin\Debug\EncryptDecryptConStr.exe
+D:\BsdServiceSync\EncryptDecryptConStr\bin\Debug\EncryptDecryptConStr.pdb
+D:\BsdServiceSync\EncryptDecryptConStr\bin\Debug\KE.LibraryAPI.dll
+D:\BsdServiceSync\EncryptDecryptConStr\bin\Debug\KE.LibraryAPI.pdb
+D:\BsdServiceSync\EncryptDecryptConStr\obj\Debug\EncryptDecryptConStr.csproj.CopyComplete
+D:\BsdServiceSync\EncryptDecryptConStr\obj\Debug\EncryptDecryptConStr.exe
+D:\BsdServiceSync\EncryptDecryptConStr\obj\Debug\EncryptDecryptConStr.pdb
+D:\BsdServiceSync\EncryptDecryptConStr\obj\Debug\EncryptDecryptConStr.csprojAssemblyReference.cache
